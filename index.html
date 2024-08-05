@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Inclui o arquivo CSS para estilização -->
+</head>
+<body>
+    <button id="darkModeToggle" onclick="toggleDarkMode()">Modo Escuro</button> <!-- Botão para alternar modo noturno -->
+    <div class="container">
+        <h1>Conversor de Unidades</h1>
+        <div class="converter">
+            <div class="row">
+                <select id="category" onchange="updateUnits()"> <!-- Seletor de categoria -->
+                    <option value="length">Comprimento</option>
+                    <option value="temperature">Temperatura</option>
+                    <option value="pressure">Pressão</option>
+                    <option value="volume">Volume</option>
+                    <option value="weight">Peso</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <input type="number" id="inputValue" placeholder="Insira o valor" oninput="convert()"> <!-- Campo de entrada do valor -->
+                    <select id="unitFrom" onchange="convert()"></select> <!-- Seletor de unidade de origem -->
+                </div>
+                <span class="equal-sign">=</span> <!-- Símbolo de igual maior -->
+                <div class="input-group">
+                    <input type="text" id="outputValue" disabled> <!-- Campo de saída do valor convertido -->
+                    <select id="unitTo" onchange="convert()"></select> <!-- Seletor de unidade de destino -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Inclui o arquivo JavaScript -->
+</body>
+</html>

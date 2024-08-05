@@ -1,0 +1,96 @@
+/* Define a estilização geral do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #f4f4f4; /* Define a cor de fundo */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Define a altura da viewport */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estiliza o contêiner principal */
+.container {
+    background: white; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center; /* Centraliza texto */
+    position: relative; /* Define o contêiner como relativo */
+}
+
+/* Estiliza o botão do modo noturno */
+#darkModeToggle {
+    position: fixed; /* Define a posição do botão como fixa */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #333; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão */
+}
+
+/* Estiliza a seção do conversor */
+.converter {
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Estiliza inputs, seletores e botões */
+input, select, button {
+    margin: 10px 0; /* Margem superior e inferior */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    width: 200px; /* Define uma largura fixa para inputs e selects */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Define um tamanho fixo para as caixas de entrada e saída */
+input[type="number"], input[type="text"] {
+    width: 200px; /* Largura fixa */
+}
+
+/* Estiliza as linhas da seção do conversor */
+.row {
+    display: flex; /* Usa flexbox para organizar os elementos em linha */
+    align-items: center; /* Alinha os itens ao centro */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Estiliza os grupos de entrada */
+.input-group {
+    display: flex; /* Usa flexbox para organizar os elementos em linha */
+    flex-direction: column; /* Define a direção da flexbox como coluna */
+    align-items: center; /* Alinha os itens ao centro */
+}
+
+/* Estiliza o símbolo de igual */
+.equal-sign {
+    font-size: 2em; /* Tamanho de fonte maior */
+    margin: 0 20px; /* Margem lateral */
+}
+
+/* Estiliza o modo noturno */
+body.dark-mode {
+    background-color: #333; /* Fundo escuro */
+    color: white; /* Texto branco */
+}
+
+body.dark-mode .container {
+    background: #444; /* Fundo do contêiner escuro */
+    color: white; /* Texto branco */
+}
+
+body.dark-mode input, body.dark-mode select {
+    background: #555; /* Fundo dos inputs e selects escuro */
+    color: white; /* Texto branco */
+    border: 1px solid #777; /* Borda escura */
+}
+
+body.dark-mode #darkModeToggle {
+    background-color: #ddd; /* Fundo claro para o botão no modo escuro */
+    color: black; /* Texto preto */
+}
